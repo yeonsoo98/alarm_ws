@@ -22,11 +22,15 @@ ROS 2 (Robot Operating System 2)은 로봇 개발을 위한 오픈 소스 프레
 
 #### 해당 시나리오 관련 mp3 파일 업로드
 
-
 ### 환경 구성
 - Windows 환경 가능
 - Linux 기반의 Jetson Orin
 - MobiFren Bluetooth Speaker
 
+## Docker 환경 
+```
+docker build -t ros2_humble_local:latest .
+docker run -it --rm --name yskim_alarm --network host -v ~/ros2_ws:/ros2_ws ros2_humble_local:latest
+```
 ### TO DO LIST
 - Docker 환경 준비중
