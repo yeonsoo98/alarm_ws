@@ -6,7 +6,8 @@ from std_msgs.msg import String
 import pygame
 import time
 import os
-
+os.environ['SDL_AUDIODRIVER'] = 'dsp'
+pygame.mixer.init()  # Initialize the mixer module
 class SoundAlarmNode(Node):
     def __init__(self):
         super().__init__('sound_alarm_node')
