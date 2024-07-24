@@ -27,10 +27,26 @@ ROS 2 (Robot Operating System 2)은 로봇 개발을 위한 오픈 소스 프레
 - Linux 기반의 Jetson Orin
 - MobiFren Bluetooth Speaker
 
-## Docker 환경 
+## Docker 환경 (local pc)
 ```
 docker build -t ros2_humble_local:latest .
 docker run -it --rm --name yskim_alarm --network host -v ~/ros2_ws:/ros2_ws ros2_humble_local:latest
+
+export PULSE_SERVER=tcp:127.0.0.1:4713 # 환경 변수 추가
+```
+
+## Docker 환경 (jetson orin)
+```
+docker build -t ros2_humble_local:latest .
+docker run -it --rm --runtime nvidia --network host --name yskim_alarm --device /dev/snd -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=$DISPLAY -v ~/ros2_ws:/ros2_ws ros2_humble_jetson:latest
+
+export PULSE_SERVER=tcp:127.0.0.1:4713 # 환경 변수 추가
+```
+
+
+## Alarm 실행 
+```
+ros2 launch sound_alarm alarm_launch.py
 ```
 ### TO DO LIST
 - Docker 환경 준비중
