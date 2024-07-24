@@ -33,6 +33,8 @@ class SoundAlarmNode(Node):
             "alarm6": "/home/ys/ros2_ws/stop_eat.mp3",
             "alarm7": "/home/ys/ros2_ws/stop_eat_driving.mp3",
             "alarm8": "/home/ys/ros2_ws/stop_fight.mp3",
+            "alarm9": "/home/ys/ros2_ws/stop_phone.mp3",
+            "alarm10": "/home/ys/ros2_ws/use_seatbelt.mp3",
         }
         if sound_name in sound_files:
             sound_path = sound_files[sound_name]

@@ -13,8 +13,8 @@ class AlarmPublisher(Node):
         self.get_logger().info('알람 발행 모드 실행.')
 
     def get_ai_generated_message(self):
-        possible_messages = ['alarm1', 'alarm2', 'alarm3', 'alarm4',
-                             'alarm5', 'alarm6', 'alarm7', 'alarm8']
+        possible_messages = ['alarm1', 'alarm2', 'alarm3', 'alarm4','alarm5',
+                             'alarm6', 'alarm7', 'alarm8', 'alarm9','alarm10']
         chosen_message = random.choice(possible_messages)
         self.get_logger().info(f'Generated message: {chosen_message}')
         return chosen_message
