@@ -41,6 +41,14 @@ docker build -t ros2_humble_local:latest .
 docker run -it --rm --runtime nvidia --network host --name yskim_alarm --device /dev/snd -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=$DISPLAY -v ~/ros2_ws:/ros2_ws ros2_humble_jetson:latest
 
 export PULSE_SERVER=tcp:127.0.0.1:4713 # 환경 변수 추가
+
+
+##  도커 환경
+# 컨테이너 시작
+docker start yskim_alarm
+
+# 컨테이너 접속
+docker exec -it yskim_alarm /bin/bash
 ```
 
 
