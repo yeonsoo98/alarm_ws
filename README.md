@@ -49,6 +49,9 @@ docker start yskim_alarm
 
 # 컨테이너 접속
 docker exec -it yskim_alarm /bin/bash
+
+docker exec -it yskim_alarm_privileged /bin/bash
+
 ```
 
 
